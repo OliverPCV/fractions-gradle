@@ -57,8 +57,7 @@ public class Fraction implements IFraction {
         //int jmenovatel = getDenominator() * other.getDenominator();
         //int citatel = (getNumerator() * other.getDenominator()) - (getDenominator() * other.getNumerator());
         //return new Fraction(jmenovatel, citatel);
-
-+    }
+    }
 
     @Override
     public IFraction times(IFraction other) {
@@ -86,10 +85,9 @@ public class Fraction implements IFraction {
             if(numerator % i == 0 && denominator % i == 0){
                 kraceni = i;
             }
-            citatel = numerator / kraceni;
-            jmenovatel = denominator / kraceni;
+
         }
-        return new Fraction(citatel, jmenovatel);
+        return new Fraction(numerator / kraceni, denominator / kraceni);
     }
 
     @Override
